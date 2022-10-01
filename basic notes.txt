@@ -1,0 +1,30 @@
+class Employee
+{
+// to achieve tight encapsulation
+//this is instance field
+//memory allocated in heap and allocated after object creation
+/*
+default constructor is added by compiler 
+*/ 
+private int id;
+private String name;
+private double salary;
+// add parameterised constructor 
+Employee(int eid, String name,double sal){
+id=eid
+//name=name; //here we willnot get error but it will not initialize name
+//use this it will avoid naming conflicts
+this.name=name;//this keyword is mandatory
+//if local variable has same name as instance then it is mandatory
+this.salary=sal;
+}
+//add method getEmpDetails
+// method is action on data
+//method declaration 
+// acess specifie, return type, argument
+String getEmpdetail()
+{
+return "employee detail"+this.id+"name"+this.name+"salary ="+this.salary;// this optional here 
+}
+
+}
